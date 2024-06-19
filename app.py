@@ -126,7 +126,7 @@ def logout():
 @app.route('/predict', methods=['GET','POST'])
 def predict():
 	#Alternative Usage of Saved Model
-    DT_Model = open(r'C:\Users\tanvi\PROJECT3\Decision_Tree_Model.pkl','rb')
+    DT_Model = open('Decision_Tree_Model.pkl','rb')
     loaded_model = joblib.load(DT_Model)
     
     if request.method == 'POST': 
