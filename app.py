@@ -123,7 +123,7 @@ def logout():
         return redirect(url_for('login'))
     return render_template('logout.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET','POST'])
 def predict():
 	#Alternative Usage of Saved Model
     DT_Model = open(r'C:\Users\tanvi\PROJECT3\Decision_Tree_Model.pkl','rb')
