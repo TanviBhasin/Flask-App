@@ -1,5 +1,5 @@
 gunicorn
-﻿Flask
+﻿flask
 pandas
 scikit-learn
 joblib
