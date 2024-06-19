@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Credit Card App</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="static/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="static/css/style.css" rel="stylesheet">
+    <style>
+        td{
+            color: #061429;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="/index" class="navbar-brand p-0">
+                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>CREDVISION</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="/index" class="nav-item nav-link">Home</a>
+                    <a href="/about" class="nav-item nav-link">About</a>
+                    <a href="/service" class="nav-item nav-link">Services</a>
+                    
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">See More</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="/feature" class="dropdown-item">Our features</a>
+                            <a href="/privacy" class="dropdown-item">Privacy Policy</a>
+                            <a href="/terms" class="dropdown-item">Terms & Conditions</a>
+                            <a href="/form" class="dropdown-item active">Application Form</a>
+                        </div>
+                    </div>
+                    <a href="/contact" class="nav-item nav-link">Contact</a>
+                </div>
+                <div style="padding:10px;"><a href="/logout"><i class="fas fa-sign-out-alt" style="font-size:24px"></i></a></div>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">Application Form</h1>
+                    <a href="/index" class="h5 text-white">Home</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <a href="/form" class="h5 text-white">Application Form</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Form Start -->
+    <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase"><a href="/form">Credit Card Application Form</a></h5>
+                <h4 class="mb-0">Please Fill all the details</h4>
+            </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card shadow-lg">
+                    <div class="card-body bg-primary">
+                        <form action="/predict" method="POST">
+                            <table cellpadding = "12" style="margin: 0 auto;">
+ 
+                                <!----- First Name ---------------------------------------------------------->
+                                <tr>
+                                <td><b>FIRST NAME</b></td>
+                                <td><input type="text" name="First_Name" maxlength="30" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;"/>
+                                </td>
+                                </tr>
+                                 
+                                <!----- Last Name ---------------------------------------------------------->
+                                <tr>
+                                <td><b>LAST NAME</b></td>
+                                <td><input type="text" name="Last_Name" maxlength="30" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;"/>
+                                </td>
+                                </tr>
+                                  
+                                <!----- Age---------------------------------------------------->
+                                <tr>
+                                <td><b>AGE</b></td>
+                                <td><input type="text" name="Age" maxlength="100" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;"/></td>
+                                </tr>
+                                 
+                                <!----- Gender -------------------------------------------------->
+                                <tr>
+                                <td><b>GENDER</b></td>
+                                <td>
+                                <b>Male </b><input type="radio" name="Gender" value="Male" />
+                                <b>Female </b><input type="radio" name="Gender" value="Female" />
+                                </td>
+                                </tr>
+                                
+                                <!----- Total Debt ---------------------------------------------------------->
+                                <tr>
+                                <td><b>TOTAL DEBT</b></td>
+                                <td>
+                                <input type="text" name="Total_Debt" maxlength="10" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;" />
+                                </td>
+                                </tr>
+                                 
+                                <!----- Existing Bank Customer ---------------------------------------------------------->
+                                <tr>
+                                <td><b>EXISTING BANK CUSTOMER</b></td>
+                                <td>
+                                <select name="Bank_Customer" id="Bank_Customer" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;">
+                                <option value="-1">Select</option>
+                                <option value="1">Genuine</option>
+                                <option value="2">Government Guarantor</option>
+                                <option value="3">Permanent</option>
+                                </select>
+                                </td>
+                                </tr>
+                                
+                                <!----- Employment Status ---------------------------------------------------------->
+                                <tr>
+                                <td><b>EMPLOYMENT STATUS</b></td>
+                                <td>
+                                <select name="E_Status" id="E_Status" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;">
+                                <option value="-1">Select</option>
+                                <option value="1">t</option>
+                                <option value="2">f</option>
+                                </td>
+                                </tr>
+                                
+                                <!----- Income ---------------------------------------------------------->
+                                <tr>
+                                <td><b>INCOME</b></td>
+                                <td><input type="text" name="Income" maxlength="30" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;" />
+                                </td>
+                                </tr>
+                                
+                                <!----- Total Experience ---------------------------------------------------------->
+                                <tr>
+                                <td><b>TOTAL EXPERIENCE</b> <br /></td>
+                                <td><input type="text" name="Tot_Experience" maxlength="10" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;" /></td>
+                                </tr>
+                                
+                                <!----- Credit Score ---------------------------------------------------------->
+                                <tr>
+                                <td><b>CREDIT SCORE</b><br /></td>
+                                <td><input type="text" name="Credit_Score" maxlength="10" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;" /></td>
+                                </tr>
+                                 
+                                <!----- Education ---------------------------------------------------------->
+                                <tr>
+                                <td><b>EDUCATION LEVEL</b></td>
+                                <td>
+                                <select name="Edu_Level" id="Edu_Level" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;">
+                                <option value="-1">Select</option>
+                                <option value="1">Workspace Training</option>
+                                <option value="2">Quality Control Expert</option>
+                                <option value="3">Master's Degree</option> 
+                                <option value="4">Researcher</option>
+                                <option value="5">Certified Course Professional</option>
+                                <option value="6">Business Degree</option>
+                                <option value="7">Completed High School</option>
+                                <option value="8">Diploma Holder</option>
+                                <option value="9">Diverse Background</option>
+                                <option value="10">IT Degree</option>
+                                <option value="11">Entrepreneurship Graduate</option>
+                                <option value="12">Agriculture Degree</option>
+                                <option value="13">Food Industry Degree</option>
+                                <option value="14">Journalism Degree</option>
+                                </select>
+                                </td>
+                                </tr>
+                                
+                                <tr>
+                                <td><b>PRIOR DEFAULT</b></td>
+                                 
+                                <td>
+                                <select name="Default" id="Default" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;">
+                                <option value="-1">Select:</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                                </select>
+                                </td>
+                                </tr>
+                                
+                                <tr>
+                                <td><b>MARITAL STATUS</b></td>
+                                <td>
+                                <select name="Mar_Status" id="Mar_Status" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;">
+                                <option value="-1">Select:</option>
+                                <option value="1">Single</option>
+                                <option value="2">Married</option>
+                                <option value="3">Divorced</option>
+                                </select>
+                                </td>
+                                </tr>
+                                
+                                <tr>
+                                <td><b>CITIZENSHIP</b></td>
+                                <td>
+                                <select name="Citizen" id="Citizen" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;">
+                                <option value="-1">Select:</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                                <option value="3">Cannot disclose</option>
+                                </select>
+                                </td>
+                                </tr>
+                                
+                                
+                                <tr>
+                                <td><b>DRIVERS LICENSE</b></td>
+                                <td>
+                                <select name="D_Licence" id="D_Licence" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;">
+                                <option value="-1">Select:</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                                </select>
+                                </td>
+                                </tr>
+                                
+                                <tr>
+                                <td><b>ETHNICITY</b></td>
+                                 
+                                <td>
+                                <select name="Ethnicity" id="Ethnicity" style="border-radius: 8px; border: 1px solid #ccc; padding: 1px;">
+                                <option value="-1">Select:</option>
+                                <option value="1">Asian</option>
+                                <option value="2">Hispanic</option>
+                                <option value="3">Black</option>
+                                <option value="4">White</option>
+                                <option value="5">Jewish</option>
+                                <option value="6">Other</option>
+                                <option value="7">Unknown</option>
+                                <option value="8">Middle Eastern</option>
+                                <option value="9">Native American</option>
+                                </select>
+                                </td>
+                                </tr>
+                                  
+                                <!------- Submit and Reset---------------->
+                                <tr>
+                                <td colspan="4" class="button" style="margin: 0 auto; text-align:center;">
+                                <input type="submit" value="Submit" style="border-radius: 8px; width:110px; border: 1px solid #ccc;">
+                                <input type="reset" value="Reset" style="border-radius: 8px;  width:110px; border: 1px solid #ccc;">
+                                </td>
+                                </tr>
+                                </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Form End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 p-4">
+                        <a href="/index" class="navbar-brand">
+                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>CREDVISION</h1>
+                        </a>
+                        <p class="mt-3 mb-4">Using Machine Learning models to predict credit card approval outcomes with precision.</p>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Get In Touch</h3>
+                            </div>
+                        
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">info@example.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+012 345 67890</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Quick Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="/index"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="/about"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                <a class="text-light mb-2" href="/service"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+                                <a class="text-light" href="/contact"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Popular Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="/privacy"><i class="bi bi-arrow-right text-primary me-2"></i>Privacy Policy</a>
+                                <a class="text-light" href="/terms"><i class="bi bi-arrow-right text-primary me-2"></i>Terms & Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-12">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">CredVision</a>. All Rights Reserved. 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/wow/wow.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/counterup/counterup.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>
